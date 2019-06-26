@@ -1,0 +1,27 @@
+IBRUN: Command is ./hello-mpi
+IBRUN: Command is /home/y1gao/hpc-tasks/week6/hello-mpi
+IBRUN: no hostfile mod needed
+IBRUN: Nodefile is /tmp/Ov9jY5bOb9
+
+IBRUN: Adding MV2_CPU_MAPPING=0-0:1-1:2-2:3-3:4-4:5-5:6-6:7-7:8-8:9-9:10-10:11-11 to the environment
+IBRUN: Adding MV2_USE_OLD_BCAST=1 to the environment
+IBRUN: Adding MV2_USE_HUGEPAGES=0 to the environment
+IBRUN: Adding MV2_HOMOGENEOUS_CLUSTER=0 to the environment
+IBRUN: Adding MV2_ENABLE_AFFINITY=1 to the environment
+IBRUN: Adding MV2_DEFAULT_TIME_OUT=23 to the environment
+IBRUN: Adding MV2_USE_UD_HYBRID=0 to the environment
+IBRUN: Added 7 new environment variables to the execution environment
+IBRUN: Command string is [mpirun_rsh -np 12 -hostfile /tmp/Ov9jY5bOb9 -export-all /home/y1gao/hpc-tasks/week6/hello-mpi]
+My rank: PW[0] out of TotalPEs=[12% 
+My rank: PW[6] out of TotalPEs=[12% 
+My rank: PW[4] out of TotalPEs=[12% 
+My rank: PW[2] out of TotalPEs=[12% 
+My rank: PW[5] out of TotalPEs=[12% 
+My rank: PW[1] out of TotalPEs=[12% 
+My rank: PW[3] out of TotalPEs=[12% 
+My rank: PW[7] out of TotalPEs=[12% 
+My rank: PW[10] out of TotalPEs=[12% 
+My rank: PW[11] out of TotalPEs=[12% 
+My rank: PW[9] out of TotalPEs=[12% 
+My rank: PW[8] out of TotalPEs=[12% 
+IBRUN: Job ended with value 0

@@ -1,0 +1,5 @@
+loading cuda module
+calling nvcc-smi
+/var/spool/slurmd/job24194726/slurm_script: line 17: nvcc-smi: command not found
+calling simple hello
+/var/spool/slurmd/job24194726/slurm_script: line 21: ./simple_hello: No such file or directory
