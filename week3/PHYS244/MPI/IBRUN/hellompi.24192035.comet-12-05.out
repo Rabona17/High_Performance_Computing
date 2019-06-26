@@ -1,0 +1,65 @@
+IBRUN: Command is ../hello_mpi
+IBRUN: Command is /home/y1gao/hpc-tasks/PHYS244/MPI/hello_mpi
+IBRUN: no hostfile mod needed
+IBRUN: Nodefile is /tmp/4Q3afxnN_a
+
+IBRUN: MPI binding policy: compact/core for 1 threads per rank (12 cores per socket)
+IBRUN: Adding MV2_USE_OLD_BCAST=1 to the environment
+IBRUN: Adding MV2_CPU_BINDING_LEVEL=core to the environment
+IBRUN: Adding MV2_ENABLE_AFFINITY=1 to the environment
+IBRUN: Adding MV2_DEFAULT_TIME_OUT=23 to the environment
+IBRUN: Adding MV2_CPU_BINDING_POLICY=bunch to the environment
+IBRUN: Adding MV2_USE_HUGEPAGES=0 to the environment
+IBRUN: Adding MV2_HOMOGENEOUS_CLUSTER=0 to the environment
+IBRUN: Adding MV2_USE_UD_HYBRID=0 to the environment
+IBRUN: Added 8 new environment variables to the execution environment
+IBRUN: Command string is [mpirun_rsh -np 48 -hostfile /tmp/4Q3afxnN_a -export-all /home/y1gao/hpc-tasks/PHYS244/MPI/hello_mpi]
+ node          16 : Hello world
+ node          18 : Hello world
+ node          22 : Hello world
+ node          20 : Hello world
+ node          15 : Hello world
+ node          21 : Hello world
+ node          19 : Hello world
+ node          17 : Hello world
+ node          13 : Hello world
+ node          14 : Hello world
+ node          11 : Hello world
+ node          10 : Hello world
+ node           9 : Hello world
+ node           0 : Hello world
+ node           6 : Hello world
+ node           7 : Hello world
+ node          23 : Hello world
+ node           8 : Hello world
+ node           3 : Hello world
+ node          12 : Hello world
+ node           5 : Hello world
+ node           2 : Hello world
+ node           4 : Hello world
+ node           1 : Hello world
+ node          43 : Hello world
+ node          40 : Hello world
+ node          46 : Hello world
+ node          28 : Hello world
+ node          25 : Hello world
+ node          42 : Hello world
+ node          32 : Hello world
+ node          44 : Hello world
+ node          36 : Hello world
+ node          47 : Hello world
+ node          38 : Hello world
+ node          41 : Hello world
+ node          33 : Hello world
+ node          39 : Hello world
+ node          29 : Hello world
+ node          31 : Hello world
+ node          37 : Hello world
+ node          45 : Hello world
+ node          34 : Hello world
+ node          27 : Hello world
+ node          35 : Hello world
+ node          30 : Hello world
+ node          24 : Hello world
+ node          26 : Hello world
+IBRUN: Job ended with value 0

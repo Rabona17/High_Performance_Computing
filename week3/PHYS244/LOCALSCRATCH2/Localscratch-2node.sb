@@ -1,0 +1,42 @@
+#!/bin/bash
+#SBATCH --job-name="localscratch2"
+#SBATCH --output="localscratch2.%j.%N.out"
+#SBATCH --partition=compute
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24
+#SBATCH --export=ALL
+#SBATCH -t 00:10:00
+
+#Get a list of hosts
+export SLURM_NODEFILE=`generate_pbs_nodefile`
+cat $SLURM_NODEFILE > nodes.list.$SLURM_JOBID
+uniq nodes.list.$SLURM_JOBID > nodes.unq.list
+
+#Change to local scratch (SSD) and run IOR benchmark
+cd /scratch/$USER/$SLURM_JOBID
+
+#Run IO benchmark
+ibrun -np 48 $SLURM_SUBMIT_DIR/IOR.exe -F -t 1m -b 4m -v -v -w -k
+
+#Change back to submit dir
+cd $SLURM_SUBMIT_DIR
+
+#List files on both nodes
+for (( nn=1; nn<=$SLURM_NNODES; nn++ ))
+ do 
+   p="`sed -n ${nn}p nodes.unq.list`"
+   echo "Files on $p"
+   ssh $p /bin/ls /scratch/$USER/$SLURM_JOBID
+ done
+
+
+#Tar back the results from each node
+for (( nn=1; nn<=$SLURM_NNODES; nn++ ))
+ do
+   p="`sed -n ${nn}p nodes.unq.list`"
+   echo "Tar files on $p"
+   ssh $p /bin/tar -cvf $SLURM_SUBMIT_DIR/node$nn.tar /scratch/$USER/$SLURM_JOBID
+ done
+
+rm nodes.unq.list
+rm nodes.list.$SLURM_JOBID

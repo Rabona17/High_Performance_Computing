@@ -1,0 +1,191 @@
+IOR-2.10.3: MPI Coordinated Test of Parallel I/O
+
+Run began: Thu Feb 15 06:09:18 2018
+Command line used: /home/mahidhar/WEBINAR/LOCALSCRATCH/IOR.exe -F -t 1m -b 4m -v -v -w -k
+Machine: Linux comet-03-48.sdsc.edu 2.6.32-696.10.3.el6.x86_64 #1 SMP Tue Sep 26 18:14:22 UTC 2017 x86_64
+Using synchronized MPI timer
+Start time skew across all tasks: 0.00 sec
+Path: /scratch/mahidhar/14294089
+FS: 209.2 GiB   Used FS: 0.0%   Inodes: 418.5 Mi   Used Inodes: 0.0%
+Participating tasks: 48
+task 0 on comet-03-48.sdsc.edu
+task 1 on comet-03-48.sdsc.edu
+task 10 on comet-03-48.sdsc.edu
+task 11 on comet-03-48.sdsc.edu
+task 12 on comet-03-48.sdsc.edu
+task 13 on comet-03-48.sdsc.edu
+task 14 on comet-03-48.sdsc.edu
+task 15 on comet-03-48.sdsc.edu
+task 16 on comet-03-48.sdsc.edu
+task 17 on comet-03-48.sdsc.edu
+task 18 on comet-03-48.sdsc.edu
+task 19 on comet-03-48.sdsc.edu
+task 2 on comet-03-48.sdsc.edu
+task 20 on comet-03-48.sdsc.edu
+task 21 on comet-03-48.sdsc.edu
+task 22 on comet-03-48.sdsc.edu
+task 23 on comet-03-48.sdsc.edu
+task 24 on comet-03-54.sdsc.edu
+task 25 on comet-03-54.sdsc.edu
+task 26 on comet-03-54.sdsc.edu
+task 27 on comet-03-54.sdsc.edu
+task 28 on comet-03-54.sdsc.edu
+task 29 on comet-03-54.sdsc.edu
+task 3 on comet-03-48.sdsc.edu
+task 30 on comet-03-54.sdsc.edu
+task 31 on comet-03-54.sdsc.edu
+task 32 on comet-03-54.sdsc.edu
+task 33 on comet-03-54.sdsc.edu
+task 34 on comet-03-54.sdsc.edu
+task 35 on comet-03-54.sdsc.edu
+task 36 on comet-03-54.sdsc.edu
+task 37 on comet-03-54.sdsc.edu
+task 38 on comet-03-54.sdsc.edu
+task 39 on comet-03-54.sdsc.edu
+task 4 on comet-03-48.sdsc.edu
+task 40 on comet-03-54.sdsc.edu
+task 41 on comet-03-54.sdsc.edu
+task 42 on comet-03-54.sdsc.edu
+task 43 on comet-03-54.sdsc.edu
+task 44 on comet-03-54.sdsc.edu
+task 45 on comet-03-54.sdsc.edu
+task 46 on comet-03-54.sdsc.edu
+task 47 on comet-03-54.sdsc.edu
+task 5 on comet-03-48.sdsc.edu
+task 6 on comet-03-48.sdsc.edu
+task 7 on comet-03-48.sdsc.edu
+task 8 on comet-03-48.sdsc.edu
+task 9 on comet-03-48.sdsc.edu
+
+Summary:
+	api                = POSIX
+	test filename      = testFile
+	access             = file-per-process
+	pattern            = segmented (1 segment)
+	ordering in a file = sequential offsets
+	ordering inter file= no tasks offsets
+	clients            = 48 (24 per node)
+	repetitions        = 1
+	xfersize           = 1 MiB
+	blocksize          = 4 MiB
+	aggregate filesize = 192 MiB
+
+Using Time Stamp 1518703758 (0x5a85948e) for Data Signature
+Commencing write performance test.
+Thu Feb 15 06:09:18 2018
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s) total(s)  iter
+------    ---------  ---------- ---------  --------   --------   --------  --------   ----
+write     1883.02    4096       1024.00    0.002134   0.101727   0.098557   0.101964   0    XXCEL
+Operation  Max (MiB)  Min (MiB)  Mean (MiB)   Std Dev  Max (OPs)  Min (OPs)  Mean (OPs)   Std Dev  Mean (s)  Op grep #Tasks tPN reps  fPP reord reordoff reordrand seed segcnt blksiz xsize aggsize
+
+---------  ---------  ---------  ----------   -------  ---------  ---------  ----------   -------  --------
+write        1883.02    1883.02     1883.02      0.00    1883.02    1883.02     1883.02      0.00   0.10196   48 24 1 1 0 1 0 0 1 4194304 1048576 201326592 -1 POSIX EXCEL
+
+Max Write: 1883.02 MiB/sec (1974.49 MB/sec)
+
+Run finished: Thu Feb 15 06:09:19 2018
+Files on comet-03-48
+testFile.00000000
+testFile.00000001
+testFile.00000002
+testFile.00000003
+testFile.00000004
+testFile.00000005
+testFile.00000006
+testFile.00000007
+testFile.00000008
+testFile.00000009
+testFile.00000010
+testFile.00000011
+testFile.00000012
+testFile.00000013
+testFile.00000014
+testFile.00000015
+testFile.00000016
+testFile.00000017
+testFile.00000018
+testFile.00000019
+testFile.00000020
+testFile.00000021
+testFile.00000022
+testFile.00000023
+Files on comet-03-54
+testFile.00000024
+testFile.00000025
+testFile.00000026
+testFile.00000027
+testFile.00000028
+testFile.00000029
+testFile.00000030
+testFile.00000031
+testFile.00000032
+testFile.00000033
+testFile.00000034
+testFile.00000035
+testFile.00000036
+testFile.00000037
+testFile.00000038
+testFile.00000039
+testFile.00000040
+testFile.00000041
+testFile.00000042
+testFile.00000043
+testFile.00000044
+testFile.00000045
+testFile.00000046
+testFile.00000047
+Tar files on comet-03-48
+/bin/tar: Removing leading `/' from member names
+/scratch/mahidhar/14294089/
+/scratch/mahidhar/14294089/testFile.00000007
+/scratch/mahidhar/14294089/testFile.00000014
+/scratch/mahidhar/14294089/testFile.00000021
+/scratch/mahidhar/14294089/testFile.00000013
+/scratch/mahidhar/14294089/testFile.00000019
+/scratch/mahidhar/14294089/testFile.00000000
+/scratch/mahidhar/14294089/testFile.00000004
+/scratch/mahidhar/14294089/testFile.00000017
+/scratch/mahidhar/14294089/testFile.00000022
+/scratch/mahidhar/14294089/testFile.00000010
+/scratch/mahidhar/14294089/testFile.00000003
+/scratch/mahidhar/14294089/testFile.00000009
+/scratch/mahidhar/14294089/testFile.00000001
+/scratch/mahidhar/14294089/testFile.00000020
+/scratch/mahidhar/14294089/testFile.00000018
+/scratch/mahidhar/14294089/testFile.00000012
+/scratch/mahidhar/14294089/testFile.00000015
+/scratch/mahidhar/14294089/testFile.00000006
+/scratch/mahidhar/14294089/testFile.00000008
+/scratch/mahidhar/14294089/testFile.00000002
+/scratch/mahidhar/14294089/testFile.00000023
+/scratch/mahidhar/14294089/testFile.00000011
+/scratch/mahidhar/14294089/testFile.00000016
+/scratch/mahidhar/14294089/testFile.00000005
+Tar files on comet-03-54
+/bin/tar: Removing leading `/' from member names
+/scratch/mahidhar/14294089/
+/scratch/mahidhar/14294089/testFile.00000024
+/scratch/mahidhar/14294089/testFile.00000040
+/scratch/mahidhar/14294089/testFile.00000037
+/scratch/mahidhar/14294089/testFile.00000030
+/scratch/mahidhar/14294089/testFile.00000047
+/scratch/mahidhar/14294089/testFile.00000029
+/scratch/mahidhar/14294089/testFile.00000027
+/scratch/mahidhar/14294089/testFile.00000034
+/scratch/mahidhar/14294089/testFile.00000043
+/scratch/mahidhar/14294089/testFile.00000039
+/scratch/mahidhar/14294089/testFile.00000044
+/scratch/mahidhar/14294089/testFile.00000033
+/scratch/mahidhar/14294089/testFile.00000028
+/scratch/mahidhar/14294089/testFile.00000046
+/scratch/mahidhar/14294089/testFile.00000031
+/scratch/mahidhar/14294089/testFile.00000036
+/scratch/mahidhar/14294089/testFile.00000041
+/scratch/mahidhar/14294089/testFile.00000025
+/scratch/mahidhar/14294089/testFile.00000032
+/scratch/mahidhar/14294089/testFile.00000045
+/scratch/mahidhar/14294089/testFile.00000038
+/scratch/mahidhar/14294089/testFile.00000042
+/scratch/mahidhar/14294089/testFile.00000035
+/scratch/mahidhar/14294089/testFile.00000026

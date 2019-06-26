@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name="TFlow_1.12"
+#SBATCH --output="TFlow_1.12.%j.%N.out"
+#SBATCH --partition=gpu-shared
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=6
+#SBATCH --gres=gpu:1
+#SBATCH -t 00:10:00
+
+#Run the job
+#
+cp $SLURM_SUBMIT_DIR/test.py /scratch/$USER/$SLURM_JOBID
+module load singularity
+singularity exec /share/apps/gpu/singularity/images/tensorflow/tensorflow-gpu.simg python /scratch/$USER/$SLURM_JOBID/test.py

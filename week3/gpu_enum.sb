@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name="gpu_enum"
+#SBATCH --output="gpu_enum.%j.%N.out"
+#SBATCH --partition=gpu-shared          # define GPU partition
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=6
+#SBATCH --gres=gpu:1         # define type of GPU
+#SBATCH -t 00:10:00
+
+#Load the cuda module
+module load cuda
+
+#Run the job
+./gpu_enum
+
